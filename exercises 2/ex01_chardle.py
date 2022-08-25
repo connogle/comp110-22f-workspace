@@ -37,9 +37,6 @@ if user_character == user_word[index_number]:
     print(user_character + ' found at index ' + str(index_number))
     
 if character_instances > 0:
-    if character_instances == 1:
-        print(str(character_instances) + ' instance of ' + user_character + ' found in ' + user_word)
-    else:
-        print(str(character_instances) + ' instances of ' + user_character + ' found in ' + user_word)
+    print(str(character_instances) + ' instances of ' + user_character + ' found in ' + user_word)
 else:
     print('No instances of ' + user_character + ' found in ' + user_word)
