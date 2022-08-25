@@ -15,23 +15,24 @@ index_number: int = 0
 print('Searching for ' + user_character + ' in ' + user_word)
 if user_character == user_word[index_number]:
     character_instances += 1
-    print('e found at index ' + str(index_number))
+    print(user_character + ' found at index ' + str(index_number))
 index_number += 1
 if user_character == user_word[index_number]:
     character_instances += 1
-    print('e found at index ' + str(index_number))
+    print(user_character + ' found at index ' + str(index_number))
 index_number += 1
 if user_character == user_word[index_number]:
     character_instances += 1
-    print('e found at index ' + str(index_number))
-index_number +=1
+    print(user_character + ' found at index ' + str(index_number))
+index_number += 1
 if user_character == user_word[index_number]:
     character_instances += 1
-    print('e found at index ' + str(index_number))
-index_number +=1
+    print(user_character + ' found at index ' + str(index_number))
+index_number += 1
 if user_character == user_word[index_number]:
     character_instances += 1
-    print('e found at index ' + str(index_number))
+    print(user_character + ' found at index ' + str(index_number))
+    
 if character_instances > 0:
     print(str(character_instances) + ' instances of ' + user_character + ' found in ' + user_word)
 else:
