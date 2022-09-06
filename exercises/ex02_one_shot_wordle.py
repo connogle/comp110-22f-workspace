@@ -2,7 +2,7 @@
 
 __author__ = '730556651'
 
-secret_word: str = 'meanies'
+secret_word: str = 'python'
 word_length: int = len(secret_word)
 user_guess: str = input(f'What is your { str(word_length) }-letter guess? ')
 
