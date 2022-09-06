@@ -13,11 +13,6 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 while len(user_guess) != word_length:
     user_guess = input(f'That was not { str(word_length) } letters! Try again: ')
-
-if user_guess == secret_word:
-    print(GREEN_BOX * word_length)
-    print('Woo! You got it!')
-    exit()
    
 index_number: int = 0
 colorful_squares: str = ''
@@ -41,4 +36,7 @@ while index_number < word_length:
     index_number += 1
 
 print(colorful_squares)
-print('Not quite. Play again soon!')
+if colorful_squares == GREEN_BOX * word_length:
+    print('Woo! You got it!')
+else:
+    print('Not quite. Play again soon!')
