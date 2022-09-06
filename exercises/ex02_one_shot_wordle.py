@@ -1,6 +1,6 @@
 """An exercise in creating a short version of wordle."""
 
-__author__ = '730556651'
+__author__ = "730556651"
 
 secret_word: str = 'python'
 word_length: int = len(secret_word)
