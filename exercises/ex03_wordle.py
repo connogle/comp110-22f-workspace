@@ -21,14 +21,13 @@ def contains_char(word: str, char: str) -> bool:
 # The characters are being assignes emoji blocks with their corresponding meanings
 def emojified(secret: str, guess: str) -> str:
     """Returns a string with corresponding character placement correctness in emoji form."""
-    word_length: int = len(secret)
-    assert len(guess) == word_length
+    assert len(guess) == len(secret)
     pretty_boxes: str = ''
     i: int = 0
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
-    while i < word_length:
+    while i < len(secret):
         if guess[i] == secret[i]:
             pretty_boxes += GREEN_BOX
         elif contains_char(secret, guess[i]):
