@@ -19,7 +19,7 @@ def contains_char(word: str, char: str) -> bool:
 
 
 # The characters are being assignes emoji blocks with their corresponding meanings
-def emojified(secret: str, guess: str) -> str:
+def emojified(guess: str, secret: str) -> str:
     """Returns a string with corresponding character placement correctness in emoji form."""
     assert len(guess) == len(secret)
     pretty_boxes: str = ''
@@ -56,7 +56,7 @@ def main() -> None:
     while attempts < 7 and playing is True:
         print(f'=== Turn { attempts }/6 ===')
         user_guess = input_guess(len(secret_word))
-        print(emojified(secret_word, user_guess))
+        print(emojified(user_guess, secret_word))
         if user_guess == secret_word:
             playing = False
         else:
