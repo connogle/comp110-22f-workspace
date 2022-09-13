@@ -6,6 +6,8 @@ __author__ = '730556651'
 # Determines whether or not all of the ints in a list are the same as a given int
 def all(numbs: list[int], test: int) -> bool:
     i: int = 0
+    if len(numbs) == 0:
+        return False
     while i < len(numbs):
         if numbs[i] != test:
             return False
@@ -27,10 +29,12 @@ def max(a: list[int]) -> int:
 
 # Determines if two lists of equal length are equal at every index
 def is_equal(list1: list[int], list2: list[int]) -> bool:
-    if len(list1) != len(list2):
-        raise ValueError('is_equal requires two lists of EQUAL length')
+    if len(list1) > len(list2):
+        l: int = len(list1)
+    else:
+        l: int = len(list2)
     i: int = 0
-    while i < len(list1):
+    while i < l:
         if list1[i] != list2[i]:
             return False
         i += 1
