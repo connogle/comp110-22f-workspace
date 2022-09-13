@@ -5,7 +5,7 @@ __author__ = '730556651'
 
 # Determines whether or not all of the ints in a list are the same as a given int
 def all(numbs: list[int], test: int) -> bool:
-    i: int = 1
+    i: int = 0
     while i < len(numbs):
         if numbs[i] != test:
             return False
