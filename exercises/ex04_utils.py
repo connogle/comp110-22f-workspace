@@ -29,12 +29,10 @@ def max(a: list[int]) -> int:
 
 # Determines if two lists of equal length are equal at every index
 def is_equal(list1: list[int], list2: list[int]) -> bool:
-    if len(list1) < len(list2):
-        l: int = len(list1)
-    else:
-        l: int = len(list2)
+    if len(list1) != len(list2):
+        return False
     i: int = 0
-    while i < l:
+    while i < len(list1):
         if list1[i] != list2[i]:
             return False
         i += 1
