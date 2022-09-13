@@ -5,6 +5,7 @@ __author__ = '730556651'
 
 # Determines whether or not all of the ints in a list are the same as a given int
 def all(numbs: list[int], test: int) -> bool:
+    """Determines if the ints in a list are ALL equal to a given int."""
     i: int = 0
     if len(numbs) == 0:
         return False
@@ -17,6 +18,7 @@ def all(numbs: list[int], test: int) -> bool:
 
 # Determines the largest int in a list by using relational operators
 def max(a: list[int]) -> int:
+    """Finds the maximum value in a list of ints."""
     if len(a) == 0:
         raise ValueError('max() arg is an empty list')
     while len(a) > 1:
@@ -29,6 +31,7 @@ def max(a: list[int]) -> int:
 
 # Determines if two lists of equal length are equal at every index
 def is_equal(list1: list[int], list2: list[int]) -> bool:
+    """Tells if two strings are equal."""
     if len(list1) != len(list2):
         return False
     i: int = 0
