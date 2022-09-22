@@ -4,7 +4,7 @@ __author__ = '730556651'
 
 
 def only_evens(xs: list[int]) -> list[int]:
-    """Takes a list of arbitrary length and returns a list containing only the even numbers"""
+    """Takes a list of arbitrary length and returns a list containing only the even numbers."""
     i: int = 0
     even_list: list[int] = list()
     while i < len(xs):
@@ -12,7 +12,6 @@ def only_evens(xs: list[int]) -> list[int]:
             even_list.append(xs[i])
         i += 1
     return even_list
-
 
 
 def concat(xs: list[int], xt: list[int]) -> list[int]:
@@ -29,9 +28,12 @@ def concat(xs: list[int], xt: list[int]) -> list[int]:
     return concat_list    
 
 
-
 def sub(xs: list[int], x: int, y: int) -> list[int]:
     """Given a list of ints(xs), a start index(x), and a non-inclusive ending index(y), returns the values in the given range."""
+    assert x < len(xs)
+    assert x >= 0
+    assert len(xs) > 0
+    assert y < len(xs)
     sub_list: list[int] = list()
     while x < y:
         sub_list.append(xs[x])
