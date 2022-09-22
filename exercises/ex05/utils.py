@@ -36,7 +36,7 @@ def sub(xs: list[int], x: int, y: int) -> list[int]:
     if len(xs) == 0 or x > len(xs) or x > y:
         return sub_list
     if y > len(xs):
-        y = len(xs) - 1
+        y = len(xs)
     while x < y:
         sub_list.append(xs[x])
         x += 1
