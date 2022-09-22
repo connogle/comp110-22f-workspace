@@ -30,10 +30,13 @@ def concat(xs: list[int], xt: list[int]) -> list[int]:
 
 def sub(xs: list[int], x: int, y: int) -> list[int]:
     """Given a list of ints(xs), a start index(x), and a non-inclusive ending index(y), returns the values in the given range."""
-    assert x and y < len(xs)
-    assert x >= 0
-    assert len(xs) > 0
     sub_list: list[int] = list()
+    if x < 0:
+        x = 0
+    if len(xs) == 0 or x > len(xs) or x > y:
+        return sub_list
+    if y > len(xs):
+        y = len(xs) - 1
     while x < y:
         sub_list.append(xs[x])
         x += 1
