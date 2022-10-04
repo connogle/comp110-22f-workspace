@@ -10,6 +10,7 @@ player: str = ''
 SNAIL: str = '\U0001F40C'
 GROUSE: str = '\U0001F426'
 
+
 def main() -> None:
     """Allows the game to be a game by making a nice function and procedure soup."""
     global points
