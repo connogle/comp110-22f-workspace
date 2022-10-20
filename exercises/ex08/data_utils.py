@@ -2,6 +2,7 @@
 
 __author__ = "730556651"
 
+
 from csv import DictReader
 
 
@@ -21,7 +22,7 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
 
 
 def column_values(table: list[dict[str, str]], column: 'str') -> list[str]:
-    """Produce a list[str] of hte values in a particular column."""
+    """Produce a list of values in a particular column."""
     result: list[str] = []
     for row in table:
         item: str = row[column]
