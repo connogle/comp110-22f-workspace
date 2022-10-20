@@ -7,7 +7,7 @@ from csv import DictReader
 
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
-    """read the rows of a csv into a 'table'."""
+    """Read the rows of a csv into a 'table'."""
     result: list[dict[str, str]] = []
     # open a handle to the data file
     file_handle = open(filename, 'r', encoding='utf8')
@@ -44,6 +44,8 @@ def head(column_table: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
     for column in column_table:
         rows_in_column: list[str] = []
+        if rows > len(column_table[column]):
+            rows = len(column_table[column])
         for i in range(0, rows):
             rows_in_column.append(column_table[column][i])
         result[column] = rows_in_column
