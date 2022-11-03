@@ -1,0 +1,3 @@
+python -m mypy (filepath)
+
+ex. python -m mypy exercises/ex09/model.py
